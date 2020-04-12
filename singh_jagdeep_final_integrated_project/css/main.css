@@ -1,0 +1,1089 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+
+p {
+  color: #000;
+  
+ 
+  text-align: center;
+  margin: 0;
+}
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,
+p,
+body,
+header,
+footer,
+section,
+article,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none; /*Remove border if image is a link*/
+  margin: 0;
+  padding: 0;
+}
+
+/*html selectors*/
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+  display: none;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+
+.productDesc {
+  width: 300px;
+  padding: 50px 50px 50px 90px;
+}
+
+
+
+
+#topBar {
+  background: #1f5159;
+  background: rgba(31, 81, 89, 1);
+  height: 20px;
+  width: 920px;
+}
+
+#topBar p
+{
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  padding-top:3px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer {
+  margin: 0 auto;
+  width: 920px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*This is a flex container*/
+#mainHeader {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: solid 1px #ddd;
+}
+
+/*This is a flex item*/
+#logo {
+  width: 250px;
+  margin-top: 35px;
+}
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+#mainNav {
+  margin-left: auto;
+  width: 558px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+#mainNav ul {
+  list-style-type: none;
+}
+
+#mainNav ul li {
+  display: inline;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 30px;
+  position: relative;
+}
+
+#mainNav ul li a {
+  font-family: Myriad Pro;
+  font-size: 12px;
+  color: #364e51;
+  color: rgb(54, 78, 81);
+  padding: 5px;
+  
+}
+
+#mainNav ul li a:hover {
+  padding: 5px;
+  background-color: #ccc;
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+#promo {
+  margin-top: 40px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+
+#promoText {
+  width: 500px;
+}
+
+#promoText h2
+{
+  color : #1F5159;
+  color : rgb(31, 81, 89);
+}
+
+#promoText p {
+  color: #1f5159;
+  font-size: 13px;
+}
+
+#promoImage {
+  margin-left: auto;
+  width: 374px;
+  height: 249px;
+  background: url(../images/barter_101_4.jpg) no-repeat bottom;
+}
+
+#promoImage h2 {
+  line-height: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+#productInfo {
+  margin-top: 40px;
+
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+  flex: 50%;
+  margin-left: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 24%;
+  height:200px;
+  
+}
+
+/*Get rid of this, here just to give different height to productInfo*/
+#productInfo p {
+  line-height: 300px;
+}
+
+
+
+#mainFooter {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#address {
+  width: 220px;
+}
+
+#address p 
+{
+  margin-top: 10px;
+  font-size:13px; 
+  float:left;
+  color : #C9C8C5;
+  color : rgb(201, 200, 197);
+}
+
+#socialMedia {
+  margin-left: auto;
+  width: 310px;
+}
+
+
+#socialMedia ul{
+  list-style-type: none;
+}
+
+#socialMedia ul li 
+{
+   cursor: pointer;
+  display: inline;
+}
+
+#socialMedia ul li a 
+{
+  padding:5px;
+  filter: grayscale(100%);
+}
+
+#socialMedia ul li a:hover 
+{
+  filter: grayscale(0%);
+}
+
+#socialMedia ul li img 
+{
+  width: 30px;
+  height: 30px;
+}
+
+#footerNav 
+{
+   margin-top: 10px;
+   
+}
+
+#footerNav p 
+{
+   color : #C9C8C5;
+  color : rgb(201, 200, 197);
+}
+
+#footerNav ul {
+  list-style-type: none;
+  width: 380px;
+}
+
+#footerNav ul li {
+  display: inline;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 0px;
+  position: relative;
+  
+}
+
+#footerNav ul li a {
+  font-family: Myriad Pro;
+  font-size: 12px;
+  color : #C9C8C5;
+  color : rgb(201, 200, 197);
+  padding: 5px;
+  
+}
+
+#footerNav ul li a:hover {
+  padding: 5px;
+  background-color: #ccc;
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+#copyright 
+{
+  float:center;
+}
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+.cartName
+{
+  font-size: 23px;
+  color: #364E51;
+}
+
+
+
+.personalicon 
+{
+float:left;
+padding-top:0px;
+width: 55px;
+}
+
+
+.personaltext 
+{
+  padding-top: 20px;
+  padding-left: 200px;
+  display: flex;
+
+  font-size: 40px;
+  color: #fff;
+  
+
+}
+
+
+
+.offertext {
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  padding-right: 15px;
+  margin-right: 20px;
+}
+
+
+.productImg {
+  width: 280px;
+}
+
+.productDescLargeLeft {
+  width: 410px;
+}
+
+.productDescLargeRight {
+  width: 410px;
+}
+
+
+
+
+#personalBanner
+{
+  width: 920px;
+  height: 90px;
+  border-radius: 15px;
+  background-image: -moz-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  
+  text-align: center;
+ 
+}
+
+
+
+
+#personalBanner img 
+{
+  margin-left:20px;
+  margin-bottom: -25px;
+  display: inline;
+
+}
+
+
+
+/** body of page2 **/
+#promo2 {
+  margin-top: 40px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+
+#promoText2 {
+  width: 500px;
+  text-align: center;
+
+}
+
+#promoText2 h2
+{
+  color : #1F5159;
+  color : rgb(31, 81, 89);
+  display:flex;
+  padding-left: 100px;
+  margin-left: 40px;
+  font-size: 19px
+}
+
+#promoText2 p {
+  color: #1f5159;
+  font-size: 16px;
+  font-style:bold;
+}
+
+#promoImage2 {
+  margin-left: auto;
+  width: 321px;
+  height: 213px;
+  background: url(../images/item_1.jpg) no-repeat bottom;
+}
+
+#promoImage2 h2 {
+  line-height: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+#promo3 {
+  margin-top: 40px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#promoText3 {
+  width: 500px;
+  text-align: center;
+
+}
+
+#promoText3 h2
+{
+  color : #1F5159;
+  color : rgb(31, 81, 89);
+  display:flex;
+  padding-left: 100px;
+  margin-left: 40px;
+  font-size: 19px
+}
+
+#promoText3 p {
+  color: #1f5159;
+  font-size: 16px;
+  font-style:bold;
+}
+
+#promoImage3 {
+  margin-left: auto;
+  width: 321px;
+  height: 213px;
+  background: url(../images/item_2.jpg) no-repeat bottom;
+}
+
+
+#offer {
+  display: flex;
+  float: right;
+  font-size: 10px;
+
+}
+
+
+
+
+#author p
+{
+  font-size: 9px;
+  color:#000;
+  font-weight: bold;
+}
+
+#offerButton
+{
+  font-size: 9px;
+  color: #fff;
+  background-color:#B70F2F;
+  margin-right: 105px;
+
+}
+
+
+
+#offer2 {
+  display: flex;
+  float: right;
+  font-size: 10px;
+
+}
+
+#offerButton2
+{
+  font-size: 9px;
+  color: #fff;
+  background-color:#B70F2F;
+  margin-right: 105px;
+
+}
+
+
+#contentCon {
+  margin-top: 40px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+#contentCon p {
+  line-height: 630px;
+}
+
+#content1 {
+  width: 440px;
+}
+
+#content2 {
+  margin-left: auto;
+  width: 440px;
+}
+
+/*Page 3*/
+
+#productImages {
+  margin-top: 40px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#productImages h2
+{
+   font-size: 28px;
+}
+
+
+#productImages p 
+{
+  font-size: 20px;
+
+}
+
+/*Get rid of this, here just to give different height*/
+
+
+
+#contentAreaBig {
+  margin-top: 40px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height*/
+#contentAreaBig p {
+  line-height: 300px;
+}
+
+#promoImageBig {
+  width: 920px;
+}
+
+
+
+/* Banner*/
+.hero {
+  height: 340px;
+  width: 920px;
+  position: relative; /*set to relative to anything that uses absolute inside will positioned to the top left corner of this element*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heroIndex {
+  background: url(../images/snow_edit_13.jpg) no-repeat bottom;
+}
+
+.hero h2 {
+   color:#fff;  
+   font-size: 34px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.hero h3
+{
+  font-size: 18px;
+  margin-top:30px;
+  margin-bottom:10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.redText {
+  color: #d1113a;
+}
+
+
+#search {
+  width: 100px;
+  padding: 5px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 12;
+  text-align: center;
+  margin: 15px;
+  background: #ccc;
+}
+
+#upperNav {
+  margin-left: 90px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  height: 35px;
+}
+
+
+
+#headWords1 {
+  vertical-align: top;
+  width: 570px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+#headWords1 h2
+{
+  color : #D1113A;
+  color : rgb(209, 17, 58);
+}
+
+#headWords2 {
+  margin-bottom: 70px;
+}
+
+
+
+
+#register {
+  width: 94px;
+  height: 24px;
+  padding: 5px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #265f68;
+  background: rgba(38, 95, 104, 1);
+  margin-left: 200px;
+  color: #fff;
+}
+
+#register h4 {
+  margin-top: 5px;
+  padding: 0px 10px 20px 24px;
+}
+
+
+
+
+
+/** Cart id and class**/
+.cartHead
+{
+ text-align: center;
+ color : #1F5159;
+  color : rgb(31, 81, 89);
+}
+
+.carttext {
+  margin-top:20px;
+  display:block;
+}
+
+.carttext {
+  margin-top:20px;
+  display:block;
+  color: #fff;
+}
+
+.carttext2 {
+  margin-top:20px;
+  margin-right:50px;
+  display:block;
+  color: #fff;
+}
+
+.carttext3 {
+  margin-top:20px;
+  margin-right:80px;
+  display:block;
+  color: #fff;
+}
+
+.iconright {
+float:right;
+margin-top:-35px;
+width:75px;
+}
+
+.iconleft {
+float:left;
+padding-top:15px;
+width: 60px;
+
+}
+
+
+.iconright2 {
+float:right;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:-30px;
+height:50px;
+}
+
+.iconleft2 {
+float:left;
+padding-top:0px;
+width: 45px;
+}
+
+.iconright3 {
+float:right;
+padding-right: 10px;
+margin-top:-43px;
+width:50px;
+}
+
+.iconleft3 {
+float:left;
+padding-top:8px;
+width: 55px;
+}
+
+.iconright4 {
+float:right;
+
+margin-top:-50px;
+height: 73px;
+}
+
+.iconleft4 {
+float:left;
+padding-top:8px;
+width: 53px;
+}
+
+
+.NormalCharacterStyle {
+  font-family: Myriad Pro;
+  font-size: 12px;
+  color: #ffffff;
+  color: rgb(255, 255, 255);
+}
+
+
+
+#cart1 {
+  width: 350px;
+  height: 80px;
+  border-radius: 15px;
+  background-image: -moz-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+#cart1 img {
+  margin-left:20px;
+  margin-bottom: -35px;
+  display: inline;
+
+}
+
+
+
+#cart2 {
+  width: 350px;
+  height: 80px;
+  
+  border-radius: 10px;
+  background-image: -moz-linear-gradient( -178deg, rgb(209,68,86) 0%, rgb(191,60,77) 6%, rgb(172,52,67) 14%, rgb(162,50,64) 25%, rgb(151,48,61) 71%, rgb(131,40,51) 98%, rgb(110,31,41) 100%);
+  background-image: -webkit-linear-gradient( -178deg, rgb(209,68,86) 0%, rgb(191,60,77) 6%, rgb(172,52,67) 14%, rgb(162,50,64) 25%, rgb(151,48,61) 71%, rgb(131,40,51) 98%, rgb(110,31,41) 100%);
+  background-image: -ms-linear-gradient( -178deg, rgb(209,68,86) 0%, rgb(191,60,77) 6%, rgb(172,52,67) 14%, rgb(162,50,64) 25%, rgb(151,48,61) 71%, rgb(131,40,51) 98%, rgb(110,31,41) 100%);
+
+color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+#cart2  img {
+  margin-left:20px;
+  margin-bottom: -35px;
+ 
+  display: inline;
+
+}
+
+
+#cart3 {
+  width: 350px;
+  height: 80px;
+  
+  border-radius: 10px;
+  background-image: -moz-linear-gradient( -178deg, rgb(209,68,86) 0%, rgb(191,60,77) 6%, rgb(172,52,67) 14%, rgb(162,50,64) 25%, rgb(151,48,61) 71%, rgb(131,40,51) 98%, rgb(110,31,41) 100%);
+  background-image: -webkit-linear-gradient( -178deg, rgb(209,68,86) 0%, rgb(191,60,77) 6%, rgb(172,52,67) 14%, rgb(162,50,64) 25%, rgb(151,48,61) 71%, rgb(131,40,51) 98%, rgb(110,31,41) 100%);
+  background-image: -ms-linear-gradient( -178deg, rgb(209,68,86) 0%, rgb(191,60,77) 6%, rgb(172,52,67) 14%, rgb(162,50,64) 25%, rgb(151,48,61) 71%, rgb(131,40,51) 98%, rgb(110,31,41) 100%);
+
+color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+#cart3  img {
+  margin-left:20px;
+  margin-bottom: -35px;
+  display: inline;
+
+}
+
+#cart4 {
+  width: 350px;
+  height: 80px;
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -178deg,
+    rgb(43, 118, 130) 1%,
+    rgb(41, 107, 117) 8%,
+    rgb(38, 95, 104) 15%,
+    rgb(31, 77, 84) 79%,
+    rgb(24, 58, 64) 100%
+  );
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+#cart4  img {
+  margin-left:21px;
+  margin-bottom: -35px;
+  display: inline;
+  }
+
+
+
+#productInfo a {
+  height: 75px;
+}
+
+
+
+
+/** page 3 **/
+
+.bannerContact {
+  height: 165px;
+  width: 920px;
+  position: relative; /*set to relative to anything that uses absolute inside will positioned to the top left corner of this element*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contactIndex {
+  background: url(../images/contact_banner.jpg) no-repeat bottom;
+  margin-top: 30px;
+}
+
+
+.bannerContact h2 {
+   color:#fff;  
+   font-size: 32px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+#headWords5 {
+  margin-bottom: 140px;
+}
+
+
+
+#mainContact {
+  width: 920px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+#emailHead
+{
+display: flex;
+color: #265F68;
+
+}
+
+#mainContact h2 {
+  font-size: 30px;
+  color: #265F68;
+  
+  margin-bottom: 40px;
+  padding: 8px 0px 8px 5px;
+  
+}
+
+#contactText {
+  font-size: 15px;
+  margin-bottom: 30px;
+  width: 340px;
+  text-align: left;
+  font-weight:300;
+}
+
+#contactArea {
+  width: 460px;
+  border-right: solid 1px #CCC;
+  margin-bottom: 30px;
+}
+
+#contactForm {
+  margin-top: 30px;
+
+}
+
+
+
+
+
+
+#submit {
+  
+  color: #FFF;
+  
+  background-color: #265F68;
+  
+  border: 1px solid #265F68;
+}
+
+
+#rightArea {
+  width: 360px;
+  margin-left: 90px;
+}
+
+
+#mainContact h2 {
+  font-size: 30px;
+  color: #265F68;
+  
+  margin-bottom: 40px;
+  padding: 8px 0px 8px 5px;
+  
+}
+
+
+
+#fqaImage {
+  
+  background: url(../images/fqa.jpg) no-repeat bottom;
+  width: 300px;
+  height:200px;
+}
+
+
+#fqaImage h3 {
+  line-height: 250px;
+  text-align: center;
+  color: #fff;
+}
+
+
+#rightArea h3 {
+  font-size: 21px;
+  margin-top: 0;
+  color: #fff;
+}
+
+@media screen AND (max-width:920px)
